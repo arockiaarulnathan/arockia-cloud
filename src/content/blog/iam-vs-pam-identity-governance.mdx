@@ -9,23 +9,23 @@ Identity and Access Management and Privileged Access Management get bundled toge
 
 ## They're answering different questions
 
-IAM answers "who is this, and what should they generally be able to reach?" — the day-to-day plumbing of accounts, groups, SSO, and lifecycle (joiners, movers, leavers). PAM answers a narrower, higher-stakes question: "who can act as an administrator on the systems that would cause the most damage if compromised?" Treating PAM as just "IAM but for admins" undersells how differently it needs to be governed — session recording, just-in-time elevation, and approval workflows aren't optional extras, they're the point.
+IAM answers "who is this, and what should they generally be able to reach?": the day-to-day plumbing of accounts, groups, SSO, and lifecycle (joiners, movers, leavers). PAM answers a narrower, higher-stakes question: "who can act as an administrator on the systems that would cause the most damage if compromised?" Treating PAM as just "IAM but for admins" undersells how differently it needs to be governed. Session recording, just-in-time elevation, and approval workflows aren't optional extras, they're the point.
 
 When I led the deployment of JumpCloud for identity and Sectona for privileged access across an enterprise, the technical integration was genuinely the easy part. The hard part was governance: deciding who actually qualifies as a privileged user, and building a process that didn't just recreate old habits with new tooling.
 
 ## Where identity programs actually stall
 
-**Standing accounts that never get reviewed.** The single biggest source of identity risk in most organizations isn't a sophisticated attack — it's an account from a role someone left eighteen months ago that still has access because no one owns the review. Lifecycle automation tied to HR systems fixes most of this, but only if it's wired into the actual off-boarding process, not a quarterly spreadsheet exercise.
+**Standing accounts that never get reviewed.** The single biggest source of identity risk in most organizations isn't a sophisticated attack. It's an account from a role someone left eighteen months ago that still has access because no one owns the review. Lifecycle automation tied to HR systems fixes most of this, but only if it's wired into the actual off-boarding process, not a quarterly spreadsheet exercise.
 
-**Shared credentials on legacy systems.** Every enterprise has at least one system where "everyone just uses the admin login" because the vendor never supported individual accounts. PAM solves this by vaulting the shared credential and brokering individual, logged access to it — which is a much more realistic fix than waiting for the vendor to modernize.
+**Shared credentials on legacy systems.** Every enterprise has at least one system where "everyone just uses the admin login" because the vendor never supported individual accounts. PAM solves this by vaulting the shared credential and brokering individual, logged access to it, which is a much more realistic fix than waiting for the vendor to modernize.
 
-**Privilege creep from project work.** Someone gets elevated access for a migration project, the project ends, the access doesn't get revoked. Time-bound, just-in-time privilege — access that expires by default rather than access that has to be actively removed — closes this gap structurally instead of relying on someone remembering.
+**Privilege creep from project work.** Someone gets elevated access for a migration project, the project ends, the access doesn't get revoked. Time-bound, just-in-time privilege (access that expires by default rather than access that has to be actively removed) closes this gap structurally instead of relying on someone remembering.
 
 ## What makes it durable
 
 1. **Centralize identity before you try to govern access.** You can't enforce least privilege against a system where the same person has three different usernames across three directories.
-2. **Make privileged access loud, not invisible.** Every privileged session should be logged and, where it matters, recorded — not to create a surveillance culture, but because the audit trail is what makes incident response fast instead of forensic guesswork.
+2. **Make privileged access loud, not invisible.** Every privileged session should be logged and, where it matters, recorded, not to create a surveillance culture, but because the audit trail is what makes incident response fast instead of forensic guesswork.
 3. **Review cadence has to be realistic.** A quarterly access review that takes managers four hours to complete will get rubber-stamped. Shorter, more frequent, more targeted reviews (just privileged accounts, just recent joiners) get real scrutiny.
-4. **Own the exceptions process.** Every identity program accumulates exceptions — the vendor integration that needs a service account with broad scope, the break-glass admin account for outages. Track these explicitly, or they become the biggest gap in an otherwise well-governed system.
+4. **Own the exceptions process.** Every identity program accumulates exceptions: the vendor integration that needs a service account with broad scope, the break-glass admin account for outages. Track these explicitly, or they become the biggest gap in an otherwise well-governed system.
 
-Identity governance isn't a project with an end state — it's closer to a discipline the organization has to keep practicing. The rollout gets you the tooling. The governance is what actually reduces risk.
+Identity governance isn't a project with an end state. It's closer to a discipline the organization has to keep practicing. The rollout gets you the tooling. The governance is what actually reduces risk.

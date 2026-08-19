@@ -296,7 +296,7 @@ export const projects: ProjectCase[] = [
     summary:
       "Enterprise-wide identity and productivity platform migration executed with advanced threat protection built in from day one.",
     challenge:
-      "Migrating an entire enterprise's collaboration and identity platform is high-risk by nature — any gap in threat protection or identity configuration during cutover directly exposes the business.",
+      "Migrating an entire enterprise's collaboration and identity platform is high-risk by nature: any gap in threat protection or identity configuration during cutover directly exposes the business.",
     approach:
       "Led the enterprise migration from Google Workspace to Microsoft 365, implementing advanced threat protection and identity security controls in parallel with the migration, while optimizing licensing for cost and coverage.",
     outcome:
@@ -322,9 +322,9 @@ export const projects: ProjectCase[] = [
     summary:
       "A cloud-native Governance, Risk & Compliance platform built from the ground up as Lead Security Architect.",
     challenge:
-      "Organizations needed a scalable way to run compliance workflows — including DPIAs and third-party risk assessments — without relying on spreadsheets and manual tracking.",
+      "Organizations needed a scalable way to run compliance workflows (including DPIAs and third-party risk assessments) without relying on spreadsheets and manual tracking.",
     approach:
-      "Served as Lead Security Architect for a multi-tenant SaaS GRC platform built on Python, Django, PostgreSQL, REST APIs, and AWS (ECS, S3), embedding DevSecOps practices — automated security controls, secure coding standards, and CI/CD security validation — into the SDLC.",
+      "Served as Lead Security Architect for a multi-tenant SaaS GRC platform built on Python, Django, PostgreSQL, REST APIs, and AWS (ECS, S3), embedding DevSecOps practices (automated security controls, secure coding standards, and CI/CD security validation) into the SDLC.",
     outcome:
       "Delivered 85% of the core product roadmap and automated compliance workflows including DPIA and Third-Party Risk Management, improving operational efficiency and customer confidence.",
     stack: ["Python", "Django", "PostgreSQL", "AWS ECS", "Amazon S3", "REST APIs", "DevSecOps"],
@@ -349,7 +349,7 @@ export const services: ServiceOffering[] = [
     slug: "vciso-advisory",
     title: "vCISO & Cybersecurity Strategy Advisory",
     description:
-      "Fractional CISO leadership for organizations that need executive-level security direction without a full-time hire — cybersecurity roadmaps, Board reporting, and risk-based investment guidance.",
+      "Fractional CISO leadership for organizations that need executive-level security direction without a full-time hire: cybersecurity roadmaps, Board reporting, and risk-based investment guidance.",
     icon: "shield",
     deliverables: [
       "Enterprise cybersecurity roadmap & maturity assessment",
@@ -362,7 +362,7 @@ export const services: ServiceOffering[] = [
     slug: "grc-compliance",
     title: "Governance, Risk & Compliance",
     description:
-      "End-to-end GRC program design and execution — from ISMS build-out to certification — aligned to ISO 27001, TISAX, GDPR, and DPDP requirements.",
+      "End-to-end GRC program design and execution, from ISMS build-out to certification, aligned to ISO 27001, TISAX, GDPR, and DPDP requirements.",
     icon: "scale",
     deliverables: [
       "ISO 27001:2022 ISMS design, implementation & audit readiness",
@@ -388,7 +388,7 @@ export const services: ServiceOffering[] = [
     slug: "cloud-it-ot-security",
     title: "Cloud & IT/OT Security",
     description:
-      "Securing cloud platforms (AWS, Azure, GCP) alongside industrial control systems and manufacturing environments — including greenfield facility security design.",
+      "Securing cloud platforms (AWS, Azure, GCP) alongside industrial control systems and manufacturing environments, including greenfield facility security design.",
     icon: "cloud",
     deliverables: [
       "Cloud security architecture and posture management",
@@ -401,7 +401,7 @@ export const services: ServiceOffering[] = [
     slug: "security-operations",
     title: "Security Operations Modernization",
     description:
-      "Modernizing detection and response capability through SIEM, EDR, DLP, and MDR — with governance for outsourced SOC operations.",
+      "Modernizing detection and response capability through SIEM, EDR, DLP, and MDR, with governance for outsourced SOC operations.",
     icon: "radar",
     deliverables: [
       "SIEM/EDR/DLP/MDR evaluation, POC & deployment",
@@ -414,7 +414,7 @@ export const services: ServiceOffering[] = [
     slug: "devsecops",
     title: "DevSecOps & Secure SaaS Architecture",
     description:
-      "Embedding security into the SDLC for SaaS and product engineering teams — secure coding standards, CI/CD security automation, and secure architecture review.",
+      "Embedding security into the SDLC for SaaS and product engineering teams: secure coding standards, CI/CD security automation, and secure architecture review.",
     icon: "code",
     deliverables: [
       "DevSecOps pipeline design & CI/CD security automation",

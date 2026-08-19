@@ -21,7 +21,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Profile",
-  description: `Full profile of ${person.name} — career history, certifications, education, and technical skills.`,
+  description: `Full profile of ${person.name}: career history, certifications, education, and technical skills.`,
 };
 
 export default function ProfilePage() {
@@ -32,14 +32,14 @@ export default function ProfilePage() {
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
             <Image
               src="/images/avatar.jpg"
-              alt={`${person.name} — ${person.role}`}
+              alt={`${person.name} · ${person.role}`}
               width={112}
               height={112}
               className="h-20 w-20 shrink-0 rounded-full border-2 border-accent/40 object-cover sm:h-28 sm:w-28"
             />
             <SectionHeading
               eyebrow="Profile"
-              title={`${person.name} — ${person.role}`}
+              title={`${person.name} · ${person.role}`}
               description={person.objective}
             />
           </div>
@@ -76,7 +76,7 @@ export default function ProfilePage() {
                   <p className="font-medium text-foreground">{role.role}</p>
                   <p className="text-sm text-accent">{role.company}</p>
                   <p className="mt-1 text-xs uppercase tracking-wide text-muted">
-                    {role.location} · {role.start} — {role.end}
+                    {role.location} · {role.start} - {role.end}
                   </p>
                 </div>
               ))}

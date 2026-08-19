@@ -39,7 +39,7 @@ export function ExperienceTimeline({ items }: { items: ExperienceEntry[] }) {
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-xs uppercase tracking-wide text-muted">
-                  {item.start} — {item.end}
+                  {item.start} - {item.end}
                 </span>
                 <ChevronDown
                   className={cn(

@@ -46,7 +46,7 @@ export function Footer() {
               Arockia<span className="text-accent">.</span>
             </Link>
             <p className="mt-3 max-w-xs text-sm text-muted">
-              {person.name} — {person.role}, {contact.location}.
+              {person.name} · {person.role}, {contact.location}.
             </p>
             <div className="mt-5 flex items-center gap-3">
               {SOCIAL_LINKS.map((social) => (

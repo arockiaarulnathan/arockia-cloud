@@ -1,11 +1,11 @@
 ---
 title: "Why Zero Trust Isn't Optional for IT/OT Environments"
-excerpt: "Converged IT/OT environments — especially greenfield manufacturing sites — break the old assumption that anything inside the network perimeter can be trusted. Here's how to approach Zero Trust without disrupting production."
+excerpt: "Converged IT/OT environments, especially greenfield manufacturing sites, break the old assumption that anything inside the network perimeter can be trusted. Here's how to approach Zero Trust without disrupting production."
 date: "2026-02-10"
 tag: "Zero Trust"
 ---
 
-For decades, industrial control systems were secured by isolation — an "air gap" between the plant floor and the corporate network. That assumption has quietly collapsed. Modern manufacturing runs on connected sensors, remote vendor access, cloud-based analytics, and IT/OT convergence projects that link production data directly into ERP and business intelligence systems.
+For decades, industrial control systems were secured by isolation: an "air gap" between the plant floor and the corporate network. That assumption has quietly collapsed. Modern manufacturing runs on connected sensors, remote vendor access, cloud-based analytics, and IT/OT convergence projects that link production data directly into ERP and business intelligence systems.
 
 That connectivity is a business necessity. It's also why Zero Trust has moved from "IT best practice" to a requirement for any organization running critical infrastructure.
 
@@ -13,19 +13,19 @@ That connectivity is a business necessity. It's also why Zero Trust has moved fr
 
 Perimeter-based security assumes a clear inside and outside. In a converged environment, there isn't one. A compromised vendor laptop, a misconfigured remote access gateway, or a single unpatched PLC can become the pivot point into systems that were never designed with authentication, encryption, or segmentation in mind.
 
-When I led Zero Trust implementation across a Greenfield Lithium-ion Gigafactory, the starting point wasn't a product purchase — it was an honest inventory of trust assumptions already baked into the architecture. Every "this system trusts that system because it always has" relationship became a candidate for explicit verification.
+When I led Zero Trust implementation across a Greenfield Lithium-ion Gigafactory, the starting point wasn't a product purchase. It was an honest inventory of trust assumptions already baked into the architecture. Every "this system trusts that system because it always has" relationship became a candidate for explicit verification.
 
 ## Where to actually start
 
 1. **Segment before you secure.** You cannot apply granular access policy to a flat network. Micro-segmentation between IT, OT, and DMZ zones is the foundation everything else builds on.
-2. **Identity first, for humans and machines.** Every operator, vendor, and service account needs a verifiable identity — not a shared credential on a HMI terminal.
+2. **Identity first, for humans and machines.** Every operator, vendor, and service account needs a verifiable identity, not a shared credential on a HMI terminal.
 3. **Least privilege, enforced continuously.** Access should be scoped to the specific task and re-evaluated, not granted once and forgotten.
 4. **Monitor at the boundary and inside it.** Assume something will get through the first layer. Detection inside the OT environment is what limits blast radius.
 
 ## The part people underestimate: change management
 
-Technically, Zero Trust for OT is well understood. What derails programs is underestimating how disruptive continuous verification feels to operations teams used to systems that "just work." Every control has to be validated against uptime requirements before it goes anywhere near a production line — a failed authentication check on a safety system is not an acceptable trade-off for better logging.
+Technically, Zero Trust for OT is well understood. What derails programs is underestimating how disruptive continuous verification feels to operations teams used to systems that "just work." Every control has to be validated against uptime requirements before it goes anywhere near a production line: a failed authentication check on a safety system is not an acceptable trade-off for better logging.
 
 The programs that succeed treat plant operations as a co-owner of the security architecture, not a stakeholder to be informed after the design is finished.
 
-Zero Trust in IT/OT isn't a single project with an end date. It's an operating model — and the organizations that adopt it early are the ones that get to keep connecting systems without accumulating risk they can't see.
+Zero Trust in IT/OT isn't a single project with an end date. It's an operating model, and the organizations that adopt it early are the ones that get to keep connecting systems without accumulating risk they can't see.

@@ -20,7 +20,7 @@ export default function ProjectsPage() {
           <SectionHeading
             eyebrow="Projects"
             title="Enterprise programs delivered end to end"
-            description="These engagements involve confidential enterprise environments — presented here as case studies rather than live links."
+            description="These engagements involve confidential enterprise environments, presented here as case studies rather than live links."
           />
         </Container>
       </section>

@@ -113,7 +113,7 @@ export function Hero() {
                 <div className="rounded-full bg-background p-1.5">
                   <Image
                     src="/images/avatar.jpg"
-                    alt={`${person.name} — ${person.role}`}
+                    alt={`${person.name} · ${person.role}`}
                     width={288}
                     height={288}
                     priority

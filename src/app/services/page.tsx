@@ -30,7 +30,7 @@ export default function ServicesPage() {
           <SectionHeading
             eyebrow="Services"
             title="Cybersecurity leadership, on your terms"
-            description="From fractional CISO advisory to hands-on Zero Trust and DevSecOps implementation — engagements shaped around what your organization actually needs."
+            description="From fractional CISO advisory to hands-on Zero Trust and DevSecOps implementation. Engagements shaped around what your organization actually needs."
           />
         </Container>
       </section>

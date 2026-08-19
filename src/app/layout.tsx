@@ -24,8 +24,8 @@ const siteUrl = "https://arockia.cloud";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${person.name} — ${person.role}`,
-    template: `%s — ${person.name}`,
+    default: `${person.name} · ${person.role}`,
+    template: `%s · ${person.name}`,
   },
   description: person.objective,
   keywords: [
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: `${person.name} — ${person.role}`,
+    title: `${person.name} · ${person.role}`,
     description: person.objective,
     siteName: person.name,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${person.name} — ${person.role}`,
+    title: `${person.name} · ${person.role}`,
     description: person.objective,
   },
   icons: {

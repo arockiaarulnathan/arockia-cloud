@@ -13,7 +13,7 @@ export function ContactCTA() {
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base text-muted sm:text-lg">
             Whether it&apos;s a vCISO engagement, a Zero Trust rollout, or ISO 27001
-            certification — let&apos;s talk about what your organization needs.
+            certification, let&apos;s talk about what your organization needs.
           </p>
           <div className="mt-8 flex justify-center">
             <Button href="/contact">

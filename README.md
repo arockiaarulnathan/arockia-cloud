@@ -1,17 +1,17 @@
 # arockia.cloud
 
-Personal website for Arockia Arulnathan A — Cybersecurity Leader & CISO. Built with Next.js (App Router), Tailwind CSS, and Framer Motion, exported as a fully static site.
+Personal website for Arockia Arulnathan A, Cybersecurity Leader & CISO. Built with Next.js (App Router), Tailwind CSS, and Framer Motion, exported as a fully static site.
 
 ## Stack
 
-- **Next.js 16** (App Router, TypeScript), `output: "export"` — no server required
+- **Next.js 16** (App Router, TypeScript), `output: "export"`, no server required
 - **Tailwind CSS v4** for styling and design tokens (dark/light theme via `next-themes`)
 - **Framer Motion** for page transitions, scroll reveals, and micro-interactions
-- **next-mdx-remote** for the blog — posts live as MDX files in `src/content/blog`
+- **next-mdx-remote** for the blog: posts live as MDX files in `src/content/blog`
 
 ## Content
 
-All CV-derived content lives in one typed file: [`src/content/data/profile.ts`](src/content/data/profile.ts). Every page (Home, Profile, Services, Projects, Contact) reads from it — update it in one place to update the whole site.
+All CV-derived content lives in one typed file: [`src/content/data/profile.ts`](src/content/data/profile.ts). Every page (Home, Profile, Services, Projects, Contact) reads from it, so update it in one place to update the whole site.
 
 Blog posts are MDX files in [`src/content/blog`](src/content/blog). Add a new `.mdx` file with frontmatter (`title`, `excerpt`, `date`, `tag`) to publish a new post.
 
@@ -42,4 +42,4 @@ To preview the exported site locally: `npx serve out`.
 
 ## Updating the résumé download
 
-Replace [`public/resume/Arockia_Arulnathan_CV.pdf`](public/resume/Arockia_Arulnathan_CV.pdf) with an updated CV using the same filename — the "Download CV" button on the homepage links directly to it.
+Replace [`public/resume/Arockia_Arulnathan_CV.pdf`](public/resume/Arockia_Arulnathan_CV.pdf) with an updated CV using the same filename. The "Download CV" button on the homepage links directly to it.
