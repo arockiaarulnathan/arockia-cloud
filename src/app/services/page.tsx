@@ -41,7 +41,7 @@ export default function ServicesPage() {
             {services.map((service, i) => {
               const Icon = iconMap[service.icon];
               return (
-                <Card key={service.slug} index={i} className="flex flex-col">
+                <Card key={service.slug} id={service.slug} index={i} className="flex flex-col">
                   <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-soft text-accent">
                     <Icon className="h-6 w-6" />
                   </span>
