@@ -42,24 +42,29 @@ export default function ProjectsPage() {
                   </span>
                 </div>
 
-                <div className="mt-6 grid gap-6 sm:grid-cols-3">
-                  <div>
+                <div className="mt-6 flex flex-col gap-6 sm:flex-row">
+                  <div className="sm:w-1/3">
                     <p className="text-xs font-semibold uppercase tracking-wide text-accent">
                       Challenge
                     </p>
                     <p className="mt-2 text-sm text-muted">{project.challenge}</p>
                   </div>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-accent">
-                      Approach
-                    </p>
-                    <p className="mt-2 text-sm text-muted">{project.approach}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-accent">
-                      Outcome
-                    </p>
-                    <p className="mt-2 text-sm text-muted">{project.outcome}</p>
+
+                  <div className="hidden w-px shrink-0 bg-border sm:block" />
+
+                  <div className="grid flex-1 gap-4 sm:grid-cols-2">
+                    <div className="rounded-xl border border-border bg-surface-2 p-4">
+                      <p className="text-xs font-semibold uppercase tracking-wide text-accent">
+                        Approach
+                      </p>
+                      <p className="mt-2 text-sm text-muted">{project.approach}</p>
+                    </div>
+                    <div className="rounded-xl border border-border bg-surface-2 p-4">
+                      <p className="text-xs font-semibold uppercase tracking-wide text-accent">
+                        Outcome
+                      </p>
+                      <p className="mt-2 text-sm text-muted">{project.outcome}</p>
+                    </div>
                   </div>
                 </div>
 
