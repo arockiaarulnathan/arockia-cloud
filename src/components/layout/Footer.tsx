@@ -7,7 +7,7 @@ import { contact, person, services } from "@/content/data/profile";
 
 const SITE_LINKS = [
   { href: "/profile", label: "Profile" },
-  { href: "/services", label: "Services" },
+  { href: "/services", label: "Skills & Domains" },
   { href: "/projects", label: "Projects" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
