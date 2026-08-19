@@ -1,0 +1,30 @@
+---
+title: "In-House vs Outsourced SOC: Governing MDR/SIEM the Right Way"
+excerpt: "Outsourcing detection and response doesn't mean outsourcing accountability. Lessons from governing an outsourced SIEM operation and modernizing it into a real security operations capability."
+date: "2026-05-11"
+tag: "Security Operations"
+---
+
+Most mid-size and even many large enterprises don't build a 24/7 in-house SOC from scratch — the economics rarely justify it against a mature MDR or outsourced SIEM operations provider. The decision that actually determines whether this works isn't "build vs buy," it's how well the organization governs the relationship once it's outsourced.
+
+## The mistake: treating outsourcing as offloading
+
+The most common failure pattern is an organization signing an MDR contract and treating detection and response as fully handed off. Outsourced doesn't mean unowned. The provider brings tooling, analysts, and 24/7 coverage — but they don't inherently understand your business context: which systems are actually critical, what normal looks like for your environment, or which alerts represent genuine business risk versus background noise.
+
+## What effective governance of an outsourced SOC looks like
+
+**Define escalation criteria together, explicitly, and revisit them.** A generic "critical/high/medium/low" severity scheme from the provider's playbook will misclassify plenty of alerts that matter specifically to your environment. Sitting down and mapping your actual crown-jewel systems and unacceptable-risk scenarios into the provider's triage logic is what makes escalations meaningful instead of generic.
+
+**Own incident response decision rights internally.** The provider detects and often contains; who decides to take a production system offline, notify customers, or engage legal should be unambiguous and internal. I've seen response get delayed by confusion over who was actually authorized to make that call — that ambiguity needs to be resolved before an incident, not during one.
+
+**Measure the relationship, not just the SLA.** Response time SLAs are necessary but not sufficient. Track false positive rates, time to meaningful escalation (not just time to first response), and — periodically — run a purple-team exercise to see whether the provider actually catches what you'd expect them to catch in your specific environment.
+
+**Keep threat hunting and context-building in-house where you can.** Even with a fully outsourced SOC, having someone internal who understands the environment deeply enough to ask "why did we see this pattern" and pull the thread adds a layer of judgment that pure outsourced monitoring won't replicate.
+
+## Modernizing the operation, not just the contract
+
+When I took over governance of an outsourced SIEM operation, the highest-leverage work wasn't renegotiating the contract — it was improving the inputs: better log source coverage, tuned correlation rules reflecting our actual architecture, and a clearer internal escalation path so alerts that reached us got acted on quickly instead of sitting in a queue. The provider's detection quality is only ever as good as the visibility and context we gave them to work with.
+
+## The right mental model
+
+Think of an MDR or outsourced SIEM relationship the way you'd think of outsourced payroll or outsourced facilities management: the provider executes a function you don't want to build in-house, but the accountability for the outcome — and the judgment calls that require business context — stays with you. Organizations that internalize this get real security value from outsourcing. Organizations that treat it as a line item they no longer have to think about tend to discover the gap during an incident, which is the most expensive place to discover it.

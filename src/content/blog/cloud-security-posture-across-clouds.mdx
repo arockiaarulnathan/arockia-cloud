@@ -1,0 +1,28 @@
+---
+title: "Cloud Security Posture Management Across AWS, Azure, and GCP"
+excerpt: "Multi-cloud environments don't fail because of exotic attacks. They fail because of configuration drift nobody was watching. Here's how to actually keep posture under control."
+date: "2026-03-15"
+tag: "Cloud Security"
+---
+
+Almost every serious cloud security incident I've reviewed over the years traces back to something mundane: a storage bucket with public access left on, an overly permissive IAM role granted "temporarily" for a migration and never revoked, a security group opened for debugging and forgotten. The attackers aren't breaking sophisticated cryptography — they're finding the door someone left open.
+
+## Multi-cloud multiplies the surface area for the same mistake
+
+Running workloads across AWS, Azure, and GCP — as most enterprises of any scale eventually do, whether by strategy or by acquisition — means the same class of misconfiguration risk now exists in three different consoles, three different IAM models, and three different sets of default settings. Security teams that build deep expertise in one platform's nuances often don't have the bandwidth to build equally deep expertise in the other two, and gaps hide in that unevenness.
+
+## What actually reduces risk here
+
+**Treat cloud configuration as code, not console clicks.** Infrastructure defined and reviewed through code (Terraform, CloudFormation, or platform-native equivalents) is auditable and diffable before it's deployed. Manual console changes are where drift enters — someone fixes something under pressure at 2am directly in the console, and that state is now invisible to whatever configuration baseline you thought you had.
+
+**Centralize posture visibility instead of trusting three separate native dashboards.** AWS Security Hub, Azure Defender for Cloud, and GCP Security Command Center are all useful, but relying on three disconnected views means no one has a single picture of overall exposure. A CSPM layer that normalizes findings across clouds — even if it's not perfect — beats stitching together three tabs manually every week.
+
+**Default to least privilege, then measure the exceptions.** Every cloud IAM system makes it easy to grant broad permissions because broad permissions unblock people faster. The discipline that actually works is granting narrow access by default and tracking every broad-permission exception as a line item that has to be justified and periodically re-reviewed — not a one-time approval that's forgotten.
+
+**Continuous drift detection, not periodic audits.** A quarterly cloud security review catches maybe a quarter's worth of accumulated drift, all at once, usually under time pressure. Continuous monitoring that flags a change the day it happens is a fundamentally different (and far more effective) risk posture than a point-in-time audit.
+
+## The organizational piece people underrate
+
+Cloud security posture isn't purely a tooling problem — it's an ownership problem. In fast-moving engineering organizations, infrastructure changes happen constantly, and if security isn't embedded in the workflow (via pipeline checks, policy-as-code gates, and clear ownership of each cloud account or subscription), posture management becomes a security team chasing changes after the fact rather than preventing risky ones before they ship.
+
+The organizations with the strongest cloud posture aren't the ones with the most expensive CSPM tooling. They're the ones where engineering and security have agreed on guardrails that are enforced automatically, so that the secure configuration is the path of least resistance rather than an extra step someone has to remember.
