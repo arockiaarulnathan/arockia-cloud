@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -36,62 +37,93 @@ export function Hero() {
       />
 
       <Container className="relative">
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-surface/70 px-4 py-1.5 text-xs font-medium uppercase tracking-wide text-accent backdrop-blur"
-        >
-          {person.role} · {person.location}
-        </motion.p>
-
-        <h1 className="max-w-3xl font-display text-4xl font-semibold leading-[1.08] tracking-tight text-foreground sm:text-6xl">
-          {words.map((word, i) => (
-            <motion.span
-              key={`${word}-${i}`}
-              initial={{ opacity: 0, y: 24 }}
+        <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr] lg:items-center">
+          <div>
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.05 }}
-              className={
-                word.includes("Zero") || word.includes("Trust.")
-                  ? "text-gradient inline-block"
-                  : "inline-block"
-              }
+              transition={{ duration: 0.5 }}
+              className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-surface/70 px-4 py-1.5 text-xs font-medium uppercase tracking-wide text-accent backdrop-blur"
             >
-              {word}&nbsp;
-            </motion.span>
-          ))}
-        </h1>
+              {person.role} · {person.location}
+            </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-6 max-w-2xl text-base text-muted sm:text-lg"
-        >
-          {person.objective}
-        </motion.p>
+            <h1 className="max-w-3xl font-display text-4xl font-semibold leading-[1.08] tracking-tight text-foreground sm:text-6xl">
+              {words.map((word, i) => (
+                <motion.span
+                  key={`${word}-${i}`}
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.15 + i * 0.05 }}
+                  className={
+                    word.includes("Zero") || word.includes("Trust.")
+                      ? "text-gradient inline-block"
+                      : "inline-block"
+                  }
+                >
+                  {word}&nbsp;
+                </motion.span>
+              ))}
+            </h1>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
-          className="mt-8 flex flex-wrap items-center gap-4"
-        >
-          <Button href="/profile">
-            View Profile <ArrowRight className="h-4 w-4" />
-          </Button>
-          <Button href="/contact" variant="secondary">
-            Get in Touch
-          </Button>
-          <a
-            href="/resume/Arockia_Arulnathan_CV.pdf"
-            download
-            className="inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors hover:text-accent"
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="mt-6 max-w-2xl text-base text-muted sm:text-lg"
+            >
+              {person.objective}
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              className="mt-8 flex flex-wrap items-center gap-4"
+            >
+              <Button href="/profile">
+                View Profile <ArrowRight className="h-4 w-4" />
+              </Button>
+              <Button href="/contact" variant="secondary">
+                Get in Touch
+              </Button>
+              <a
+                href="/resume/Arockia_Arulnathan_CV.pdf"
+                download
+                className="inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors hover:text-accent"
+              >
+                <Download className="h-4 w-4" /> Download CV
+              </a>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex justify-center lg:justify-end"
           >
-            <Download className="h-4 w-4" /> Download CV
-          </a>
-        </motion.div>
+            <div className="relative">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-accent to-cyan opacity-30 blur-2xl" />
+              <motion.div
+                animate={{ y: [0, -14, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                className="relative rounded-full bg-gradient-to-br from-accent to-cyan p-[3px]"
+              >
+                <div className="rounded-full bg-background p-1.5">
+                  <Image
+                    src="/images/avatar.jpg"
+                    alt={`${person.name} — ${person.role}`}
+                    width={288}
+                    height={288}
+                    priority
+                    className="h-48 w-48 rounded-full object-cover sm:h-60 sm:w-60 lg:h-72 lg:w-72"
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}

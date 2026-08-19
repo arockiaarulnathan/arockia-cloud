@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Award, GraduationCap, BadgeCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -28,11 +29,20 @@ export default function ProfilePage() {
     <div className="pb-24">
       <section className="py-16 sm:py-20">
         <Container>
-          <SectionHeading
-            eyebrow="Profile"
-            title={`${person.name} — ${person.role}`}
-            description={person.objective}
-          />
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
+            <Image
+              src="/images/avatar.jpg"
+              alt={`${person.name} — ${person.role}`}
+              width={112}
+              height={112}
+              className="h-20 w-20 shrink-0 rounded-full border-2 border-accent/40 object-cover sm:h-28 sm:w-28"
+            />
+            <SectionHeading
+              eyebrow="Profile"
+              title={`${person.name} — ${person.role}`}
+              description={person.objective}
+            />
+          </div>
           <FadeIn delay={0.1} className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {summary.map((point) => (
               <div
