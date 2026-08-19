@@ -37,7 +37,7 @@ export function Hero() {
       />
 
       <Container className="relative">
-        <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr] lg:items-center">
+        <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <motion.p
               initial={{ opacity: 0, y: 10 }}
