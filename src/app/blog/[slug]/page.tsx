@@ -52,8 +52,8 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
     <article className="pb-24">
       <section className="py-16 sm:py-20">
         <Container>
-          <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1fr_320px]">
-            <div className="max-w-3xl">
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_320px]">
+            <div>
               <FadeIn>
                 <Link
                   href="/blog"
