@@ -130,13 +130,13 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-30 bg-background/95 backdrop-blur-lg md:hidden"
+            className="fixed inset-0 z-30 overflow-y-auto bg-background/95 backdrop-blur-lg md:hidden"
           >
             <motion.nav
               initial={{ y: -16, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.05, duration: 0.3 }}
-              className="flex h-full flex-col items-center justify-center gap-8 pb-16"
+              className="flex min-h-full flex-col items-center justify-center gap-8 py-24"
             >
               {NAV_LINKS.map((link, i) => (
                 <motion.div
