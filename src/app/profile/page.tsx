@@ -35,7 +35,7 @@ export default function ProfilePage() {
               alt={`${person.name} · ${person.role}`}
               width={112}
               height={112}
-              className="h-20 w-20 shrink-0 rounded-full border-2 border-accent/40 object-cover sm:h-28 sm:w-28"
+              className="h-20 w-20 shrink-0 self-center rounded-full border-2 border-accent/40 object-cover sm:h-28 sm:w-28 sm:self-auto"
             />
             <SectionHeading
               eyebrow="Profile"
