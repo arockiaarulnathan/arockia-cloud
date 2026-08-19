@@ -99,7 +99,7 @@ export function Navbar() {
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-surface-2 text-muted transition-colors hover:border-accent/50 hover:text-accent"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-border/60 bg-surface-2/60 backdrop-blur-md text-muted transition-colors hover:border-accent/50 hover:text-accent"
             >
               <LinkedInIcon className="h-4 w-4" />
             </a>
@@ -115,7 +115,7 @@ export function Navbar() {
               type="button"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               onClick={() => setMenuOpen((v) => !v)}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-surface-2 text-foreground"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-border/60 bg-surface-2/60 backdrop-blur-md text-foreground"
             >
               {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </button>

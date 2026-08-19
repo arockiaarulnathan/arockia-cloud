@@ -93,7 +93,7 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
 
             <aside className="hidden lg:block">
               <div className="sticky top-28 space-y-8">
-                <div className="rounded-2xl border border-border bg-surface p-6">
+                <div className="rounded-2xl border border-border/60 bg-surface/60 p-6 shadow-lg shadow-black/5 backdrop-blur-xl">
                   <p className="mb-4 text-xs font-semibold uppercase tracking-wide text-muted">
                     Share this post
                   </p>
@@ -110,7 +110,7 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
                         <li key={p.slug}>
                           <Link
                             href={`/blog/${p.slug}`}
-                            className="group block rounded-2xl border border-border bg-surface p-4 transition-colors hover:border-accent/50"
+                            className="group block rounded-2xl border border-border/60 bg-surface/60 p-4 backdrop-blur-xl transition-colors hover:border-accent/50"
                           >
                             <p className="text-sm font-medium text-foreground">
                               {p.title}

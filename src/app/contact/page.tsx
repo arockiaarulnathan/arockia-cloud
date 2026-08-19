@@ -30,8 +30,16 @@ const secondaryInfo = [
 export default function ContactPage() {
   return (
     <div className="pb-24">
-      <section className="py-16 sm:py-20">
-        <Container>
+      <section className="relative overflow-hidden py-16 sm:py-20">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full bg-accent/15 blur-3xl"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -left-24 bottom-10 h-80 w-80 rounded-full bg-cyan/15 blur-3xl"
+        />
+        <Container className="relative">
           <SectionHeading
             eyebrow="Contact"
             title="Let's talk about your security program"
@@ -39,7 +47,7 @@ export default function ContactPage() {
           />
 
           <FadeIn delay={0.1} className="mx-auto mt-12 max-w-xl">
-            <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-surface via-surface to-accent-soft p-8 text-center sm:p-12">
+            <div className="relative overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-br from-surface/70 via-surface/70 to-accent-soft/70 p-8 text-center shadow-lg shadow-black/5 backdrop-blur-xl sm:p-12">
               <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-accent-soft text-accent">
                 <Mail className="h-6 w-6" />
               </span>
@@ -64,7 +72,7 @@ export default function ContactPage() {
               {secondaryInfo.map((item) => {
                 const Icon = item.icon;
                 const content = (
-                  <div className="flex items-center gap-4 rounded-2xl border border-border bg-surface p-5">
+                  <div className="flex items-center gap-4 rounded-2xl border border-border/60 bg-surface/60 p-5 shadow-lg shadow-black/5 backdrop-blur-xl">
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent">
                       <Icon className="h-5 w-5" />
                     </span>

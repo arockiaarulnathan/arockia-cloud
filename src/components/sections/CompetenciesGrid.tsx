@@ -36,8 +36,16 @@ const icons = [
 
 export function CompetenciesGrid() {
   return (
-    <section className="py-20 sm:py-28">
-      <Container>
+    <section className="relative overflow-hidden py-20 sm:py-28">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-32 top-0 h-96 w-96 rounded-full bg-accent/10 blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-32 bottom-0 h-96 w-96 rounded-full bg-cyan/10 blur-3xl"
+      />
+      <Container className="relative">
         <SectionHeading
           eyebrow="Core Competencies"
           title="A track record built across strategy, architecture, and operations"
@@ -48,7 +56,7 @@ export function CompetenciesGrid() {
             const Icon = icons[i % icons.length];
             return (
               <StaggerItem key={competency}>
-                <div className="flex h-full items-start gap-4 rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/50">
+                <div className="flex h-full items-start gap-4 rounded-2xl border border-border/60 bg-surface/60 p-5 shadow-lg shadow-black/5 backdrop-blur-xl transition-colors hover:border-accent/50">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent">
                     <Icon className="h-5 w-5" />
                   </span>

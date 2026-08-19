@@ -47,7 +47,7 @@ export default function ProfilePage() {
             {summary.map((point) => (
               <div
                 key={point}
-                className="rounded-2xl border border-border bg-surface p-5 text-sm text-muted"
+                className="rounded-2xl border border-border/60 bg-surface/60 p-5 shadow-lg shadow-black/5 backdrop-blur-xl text-sm text-muted"
               >
                 {point}
               </div>
@@ -71,7 +71,7 @@ export default function ProfilePage() {
               {previousExperience.map((role) => (
                 <div
                   key={`${role.company}-${role.start}`}
-                  className="rounded-2xl border border-border bg-surface p-5"
+                  className="rounded-2xl border border-border/60 bg-surface/60 p-5 shadow-lg shadow-black/5 backdrop-blur-xl"
                 >
                   <p className="font-medium text-foreground">{role.role}</p>
                   <p className="text-sm text-accent">{role.company}</p>
@@ -97,7 +97,7 @@ export default function ProfilePage() {
                 {education.map((item) => (
                   <div
                     key={item.degree}
-                    className="flex items-start gap-4 rounded-2xl border border-border bg-surface p-5"
+                    className="flex items-start gap-4 rounded-2xl border border-border/60 bg-surface/60 p-5 shadow-lg shadow-black/5 backdrop-blur-xl"
                   >
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent">
                       <GraduationCap className="h-5 w-5" />
@@ -120,7 +120,7 @@ export default function ProfilePage() {
                 {certifications.map((cert) => (
                   <div
                     key={cert}
-                    className="flex items-start gap-4 rounded-2xl border border-border bg-surface p-5"
+                    className="flex items-start gap-4 rounded-2xl border border-border/60 bg-surface/60 p-5 shadow-lg shadow-black/5 backdrop-blur-xl"
                   >
                     <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent">
                       <BadgeCheck className="h-5 w-5" />
@@ -140,7 +140,7 @@ export default function ProfilePage() {
           <StaggerReveal className="mt-8 grid gap-4 sm:grid-cols-2">
             {awards.map((award) => (
               <StaggerItem key={award.title}>
-                <div className="flex h-full items-start gap-4 rounded-2xl border border-border bg-surface p-5">
+                <div className="flex h-full items-start gap-4 rounded-2xl border border-border/60 bg-surface/60 p-5 shadow-lg shadow-black/5 backdrop-blur-xl">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent">
                     <Award className="h-5 w-5" />
                   </span>

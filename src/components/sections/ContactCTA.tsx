@@ -7,7 +7,7 @@ export function ContactCTA() {
   return (
     <section className="border-t border-border py-20 sm:py-28">
       <Container>
-        <FadeIn className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-surface via-surface to-accent-soft p-10 text-center sm:p-16">
+        <FadeIn className="relative overflow-hidden rounded-3xl border border-border/60 bg-gradient-to-br from-surface/70 via-surface/70 to-accent-soft/70 p-10 text-center shadow-lg shadow-black/5 backdrop-blur-xl sm:p-16">
           <h2 className="font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             Need a security leader who can turn strategy into results?
           </h2>

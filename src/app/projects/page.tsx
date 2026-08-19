@@ -37,7 +37,7 @@ export default function ProjectsPage() {
                     </h3>
                     <p className="mt-2 text-sm text-muted">{project.summary}</p>
                   </div>
-                  <span className="inline-flex shrink-0 items-center gap-2 self-start rounded-full border border-border bg-surface-2 px-3 py-1.5 text-xs font-medium text-muted">
+                  <span className="inline-flex shrink-0 items-center gap-2 self-start rounded-full border border-border/60 bg-surface-2/60 px-3 py-1.5 text-xs font-medium text-muted backdrop-blur-md">
                     <Lock className="h-3.5 w-3.5" /> Confidential engagement
                   </span>
                 </div>
@@ -53,13 +53,13 @@ export default function ProjectsPage() {
                   <div className="hidden w-px shrink-0 bg-border sm:block" />
 
                   <div className="grid flex-1 gap-4 sm:grid-cols-2">
-                    <div className="rounded-xl border border-border bg-surface-2 p-4">
+                    <div className="rounded-xl border border-border/60 bg-surface-2/60 p-4 backdrop-blur-md">
                       <p className="text-xs font-semibold uppercase tracking-wide text-accent">
                         Approach
                       </p>
                       <p className="mt-2 text-sm text-muted">{project.approach}</p>
                     </div>
-                    <div className="rounded-xl border border-border bg-surface-2 p-4">
+                    <div className="rounded-xl border border-border/60 bg-surface-2/60 p-4 backdrop-blur-md">
                       <p className="text-xs font-semibold uppercase tracking-wide text-accent">
                         Outcome
                       </p>

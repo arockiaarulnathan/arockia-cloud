@@ -23,7 +23,7 @@ export function Card({
       transition={{ duration: 0.5, delay: index * 0.06 }}
       whileHover={{ y: -6 }}
       className={cn(
-        "group relative overflow-hidden rounded-2xl border border-border bg-surface p-6 transition-colors duration-300 hover:border-accent/50",
+        "group relative overflow-hidden rounded-2xl border border-border/60 bg-surface/60 p-6 shadow-lg shadow-black/5 backdrop-blur-xl transition-colors duration-300 hover:border-accent/50",
         id && "scroll-mt-28",
         className
       )}

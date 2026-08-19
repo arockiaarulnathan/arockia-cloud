@@ -17,14 +17,14 @@ export function SkillTagGroup({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, delay: index * 0.06 }}
-      className="rounded-2xl border border-border bg-surface p-5"
+      className="rounded-2xl border border-border/60 bg-surface/60 p-5 shadow-lg shadow-black/5 backdrop-blur-xl"
     >
       <h3 className="mb-3 text-sm font-semibold text-accent">{category}</h3>
       <div className="flex flex-wrap gap-2">
         {items.map((item) => (
           <span
             key={item}
-            className="rounded-full bg-surface-2 px-3 py-1 text-xs text-muted"
+            className="rounded-full bg-surface-2/60 px-3 py-1 text-xs text-muted backdrop-blur-md"
           >
             {item}
           </span>
