@@ -33,7 +33,7 @@ export default function ProfilePage() {
             title={`${person.name} — ${person.role}`}
             description={person.objective}
           />
-          <FadeIn delay={0.1} className="mt-8 grid gap-4 sm:grid-cols-2">
+          <FadeIn delay={0.1} className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {summary.map((point) => (
               <div
                 key={point}
