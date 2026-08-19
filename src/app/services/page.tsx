@@ -37,7 +37,7 @@ export default function ServicesPage() {
 
       <section className="border-t border-border py-16 sm:py-20">
         <Container>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {services.map((service, i) => {
               const Icon = iconMap[service.icon];
               return (

@@ -43,7 +43,7 @@ export function CompetenciesGrid() {
           title="A track record built across strategy, architecture, and operations"
           description="Twelve areas of focus that consistently show up across every enterprise security program he has led."
         />
-        <StaggerReveal className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <StaggerReveal className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {coreCompetencies.map((competency, i) => {
             const Icon = icons[i % icons.length];
             return (
