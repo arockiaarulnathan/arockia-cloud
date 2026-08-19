@@ -8,7 +8,6 @@ Personal website for Arockia Arulnathan A — Cybersecurity Leader & CISO. Built
 - **Tailwind CSS v4** for styling and design tokens (dark/light theme via `next-themes`)
 - **Framer Motion** for page transitions, scroll reveals, and micro-interactions
 - **next-mdx-remote** for the blog — posts live as MDX files in `src/content/blog`
-- **Formspree** for the contact form (client-side, no backend)
 
 ## Content
 
@@ -25,17 +24,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Contact form setup
-
-The contact form posts to [Formspree](https://formspree.io). Create a free form there, then set the form ID as an env var:
-
-```bash
-cp .env.local.example .env.local
-# edit .env.local and set NEXT_PUBLIC_FORMSPREE_ID=your-form-id
-```
-
-Until this is set, the form UI still works but shows a message asking visitors to email directly instead of submitting.
-
 ## Build & deploy (static export)
 
 ```bash
@@ -48,7 +36,7 @@ This produces a fully static site in `/out`, deployable to any static host:
 - **Netlify**: build command `npm run build`, publish directory `out`
 - **GitHub Pages**: push the contents of `out/` to the `gh-pages` branch (or use a GitHub Action)
 
-Point the `arockia.cloud` domain at whichever host you choose (CNAME/A records per that host's custom-domain instructions), then set `NEXT_PUBLIC_FORMSPREE_ID` as a build-time environment variable on that host so it gets inlined into the static build.
+Point the `arockia.cloud` domain at whichever host you choose (CNAME/A records per that host's custom-domain instructions).
 
 To preview the exported site locally: `npx serve out`.
 

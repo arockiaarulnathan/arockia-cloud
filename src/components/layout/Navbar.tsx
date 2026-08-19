@@ -8,6 +8,8 @@ import { Menu, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/Button";
+import { LinkedInIcon } from "@/components/icons/LinkedInIcon";
+import { contact } from "@/content/data/profile";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
@@ -92,6 +94,15 @@ export function Navbar() {
           </nav>
 
           <div className="hidden items-center gap-3 md:flex">
+            <a
+              href={contact.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-surface-2 text-muted transition-colors hover:border-accent/50 hover:text-accent"
+            >
+              <LinkedInIcon className="h-4 w-4" />
+            </a>
             <ThemeToggle />
             <Button href="/contact" className="px-5 py-2.5 text-sm">
               Let&apos;s talk
@@ -145,6 +156,18 @@ export function Navbar() {
                   </Link>
                 </motion.div>
               ))}
+              <motion.a
+                href={contact.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+                initial={{ y: 16, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.08 + NAV_LINKS.length * 0.05 }}
+                className="mt-2 flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-accent/50 hover:text-accent"
+              >
+                <LinkedInIcon className="h-5 w-5" />
+              </motion.a>
             </motion.nav>
           </motion.div>
         )}

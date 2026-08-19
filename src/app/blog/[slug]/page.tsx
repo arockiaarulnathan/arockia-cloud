@@ -55,13 +55,15 @@ export default async function BlogPostPage({ params }: PageProps<"/blog/[slug]">
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_320px]">
             <div>
               <FadeIn>
-                <Link
-                  href="/blog"
-                  className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors hover:text-accent"
-                >
-                  <ArrowLeft className="h-4 w-4" /> Back to blog
-                </Link>
-                <Badge>{post.tag}</Badge>
+                <div className="mb-8 flex items-center justify-between gap-4">
+                  <Link
+                    href="/blog"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors hover:text-accent"
+                  >
+                    <ArrowLeft className="h-4 w-4" /> Back to blog
+                  </Link>
+                  <Badge>{post.tag}</Badge>
+                </div>
                 <h1 className="mt-4 font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                   {post.title}
                 </h1>

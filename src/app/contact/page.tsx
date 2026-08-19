@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin, ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Button } from "@/components/ui/Button";
 import { FadeIn } from "@/components/motion/FadeIn";
-import { ContactForm } from "@/components/ContactForm";
 import { LinkedInIcon } from "@/components/icons/LinkedInIcon";
 import { contact, person } from "@/content/data/profile";
 
@@ -12,11 +12,19 @@ export const metadata: Metadata = {
   description: `Get in touch with ${person.name} for vCISO advisory, cybersecurity strategy, or speaking engagements.`,
 };
 
-const infoCards = [
-  { icon: Mail, label: "Email", value: contact.email, href: `mailto:${contact.email}` },
-  { icon: Phone, label: "Phone", value: contact.phone, href: `tel:${contact.phone.replace(/\s+/g, "")}` },
-  { icon: LinkedInIcon, label: "LinkedIn", value: "arockia-arulnathan", href: contact.linkedin },
-  { icon: MapPin, label: "Location", value: contact.location, href: undefined },
+const secondaryInfo = [
+  {
+    icon: LinkedInIcon,
+    label: "LinkedIn",
+    value: "arockia-arulnathan",
+    href: contact.linkedin,
+  },
+  {
+    icon: MapPin,
+    label: "Location",
+    value: contact.location,
+    href: undefined,
+  },
 ];
 
 export default function ContactPage() {
@@ -27,12 +35,33 @@ export default function ContactPage() {
           <SectionHeading
             eyebrow="Contact"
             title="Let's talk about your security program"
-            description="Open to vCISO engagements, advisory work, speaking opportunities, and enterprise security leadership roles."
+            description="Open to vCISO engagements, advisory work, speaking opportunities, and enterprise security leadership roles. Email is the fastest way to reach me."
           />
 
-          <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.3fr]">
-            <FadeIn className="space-y-4">
-              {infoCards.map((item) => {
+          <FadeIn delay={0.1} className="mx-auto mt-12 max-w-xl">
+            <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-surface via-surface to-accent-soft p-8 text-center sm:p-12">
+              <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-accent-soft text-accent">
+                <Mail className="h-6 w-6" />
+              </span>
+              <p className="mt-6 text-xs font-semibold uppercase tracking-wide text-muted">
+                Email
+              </p>
+              <a
+                href={`mailto:${contact.email}`}
+                className="mt-2 inline-block break-all font-display text-xl font-semibold text-foreground transition-colors hover:text-accent sm:text-2xl"
+              >
+                {contact.email}
+              </a>
+              <p className="mx-auto mt-4 max-w-sm text-sm text-muted">
+                I typically respond within 1–2 business days.
+              </p>
+              <Button href={`mailto:${contact.email}`} className="mt-8">
+                Send an email <ArrowRight className="h-4 w-4" />
+              </Button>
+            </div>
+
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              {secondaryInfo.map((item) => {
                 const Icon = item.icon;
                 const content = (
                   <div className="flex items-center gap-4 rounded-2xl border border-border bg-surface p-5">
@@ -52,8 +81,8 @@ export default function ContactPage() {
                   <a
                     key={item.label}
                     href={item.href}
-                    target={item.href.startsWith("http") ? "_blank" : undefined}
-                    rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+                    target="_blank"
+                    rel="noreferrer"
                     className="block transition-transform hover:-translate-y-0.5"
                   >
                     {content}
@@ -62,12 +91,8 @@ export default function ContactPage() {
                   <div key={item.label}>{content}</div>
                 );
               })}
-            </FadeIn>
-
-            <FadeIn delay={0.1} className="rounded-3xl border border-border bg-surface p-6 sm:p-8">
-              <ContactForm />
-            </FadeIn>
-          </div>
+            </div>
+          </FadeIn>
         </Container>
       </section>
     </div>

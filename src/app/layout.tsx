@@ -64,7 +64,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     jobTitle: person.role,
     url: siteUrl,
     email: contact.email,
-    telephone: contact.phone,
     address: {
       "@type": "PostalAddress",
       addressLocality: contact.location,

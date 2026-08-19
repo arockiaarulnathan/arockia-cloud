@@ -18,7 +18,6 @@ export const person = {
 
 export const contact = {
   email: "arockia.arulnathan@live.in",
-  phone: "+91 9789862971",
   linkedin: "https://www.linkedin.com/in/arockia-arulnathan/",
   location: "Bengaluru, India",
 };

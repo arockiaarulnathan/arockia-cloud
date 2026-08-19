@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, MapPin, ArrowUpRight } from "lucide-react";
 import { LinkedInIcon } from "@/components/icons/LinkedInIcon";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -16,12 +16,6 @@ const SITE_LINKS = [
 const SOCIAL_LINKS = [
   { href: contact.linkedin, label: "LinkedIn", icon: LinkedInIcon, external: true },
   { href: `mailto:${contact.email}`, label: "Email", icon: Mail, external: false },
-  {
-    href: `tel:${contact.phone.replace(/\s+/g, "")}`,
-    label: "Phone",
-    icon: Phone,
-    external: false,
-  },
 ];
 
 export function Footer() {
@@ -118,14 +112,6 @@ export function Footer() {
                 >
                   <Mail className="mt-0.5 h-4 w-4 shrink-0" />
                   <span className="break-all">{contact.email}</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`tel:${contact.phone.replace(/\s+/g, "")}`}
-                  className="inline-flex items-center gap-2 transition-colors hover:text-accent"
-                >
-                  <Phone className="h-4 w-4 shrink-0" /> {contact.phone}
                 </a>
               </li>
               <li className="inline-flex items-center gap-2">
