@@ -122,11 +122,10 @@ export function Footer() {
         </div>
       </Container>
 
-      <Container className="flex flex-col gap-2 border-t border-border py-6 text-xs text-muted sm:flex-row sm:justify-between">
+      <Container className="border-t border-border py-6 text-xs text-muted">
         <p>
           © {new Date().getFullYear()} {person.name}. All rights reserved.
         </p>
-        <p>Built with Next.js, Tailwind CSS &amp; Framer Motion.</p>
       </Container>
     </footer>
   );
